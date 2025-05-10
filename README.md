@@ -102,7 +102,9 @@ GTE_API_KEY=your_api_key_here
 python scripts/news_crawer.py
  ```
 
-2. Question generation:
+ Note: The full pre-processed news passages (300k) have been saved in vector DB ([ChromaDB](https://docs.trychroma.com/)). You can use it to generate QA pairs or to query the database. Download the database from [here](hhttps://drive.google.com/file/d/1ZyrRbHnAbVabt9AaVMbrY7IXWLM-ypMH/view?usp=sharing).
+
+1. Question generation:
 ```python
 python scripts/question_generation.py
  ```

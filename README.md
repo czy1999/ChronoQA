@@ -102,12 +102,7 @@ GTE_API_KEY=your_api_key_here
 python scripts/news_crawer.py
  ```
 
-2. Data processing:
-```python
-python scripts/data_process.py
- ```
-
-3. Question generation:
+2. Question generation:
 ```python
 python scripts/question_generation.py
  ```

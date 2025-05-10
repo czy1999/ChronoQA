@@ -17,15 +17,17 @@ ChronoQA is a temporal-sensitive question answering system for news data, capabl
 ## Project Structure
 ```
 ChronoQA/
-├── scripts/                  # Core processing scripts
-│   ├── data_process.py       # News data processing & batch handling
-│   ├── news_crawer.py        # News crawling module 
+├── scripts/                   # Core processing scripts
+│   ├── api.py                 # API wrappers
+│   ├── news_crawer.py         # News crawling module 
+│   ├── data_process.py        # News data processing & batch handling
+│   ├── question_filter.py     # Question filter
+│   ├── composite_question.py  # Functions for composite questions
 │   ├── question_generation.py # Question generation
-│   ├── api.py                # API wrappers
-│   └── prompt.py             # Prompt templates
-├── chronoqa.csv              # Csv dataset
-├── chronoqa.json             # Json dataset
-└── README.md                 # This file
+│   └── prompt.py              # Prompt templates
+├── chronoqa.csv               # Csv dataset
+├── chronoqa.json              # Json dataset
+└── README.md                  # This file
 ```
 
 
@@ -104,9 +106,13 @@ python scripts/news_crawer.py
 
  Note: The full pre-processed news passages (300k) have been saved in vector DB ([ChromaDB](https://docs.trychroma.com/)). You can use it to generate QA pairs or to query the database. Download the database from [here](hhttps://drive.google.com/file/d/1ZyrRbHnAbVabt9AaVMbrY7IXWLM-ypMH/view?usp=sharing).
 
-1. Question generation:
+2. Question generation:
 ```python
 python scripts/question_generation.py
+ ```
+3. Question filtering:
+```python
+python scripts/question_filter.py
  ```
 
 

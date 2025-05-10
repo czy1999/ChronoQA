@@ -95,6 +95,7 @@ pip install -r requirements.txt
 ```plaintext
 ZHIPU_API_KEY=your_api_key_here
 LLM_API_KEY=your_api_key_here
+LLM_API_BASE=your_api_url_here
 GTE_API_KEY=your_api_key_here
 ```
 

@@ -50,7 +50,7 @@ def get_db(name = 'news'):
         table = db.table('sina_urls')
         return table
     else:
-        db = TinyDB('./data_by_month/{name}.json'.format(name=name), encoding='utf-8')
+        db = TinyDB('./data/{name}.json'.format(name=name), encoding='utf-8')
         table = db.table('news')
         return table
 
@@ -99,7 +99,8 @@ if __name__ == "__main__":
     # data = urls_table.all()
     # df = pd.DataFrame(data).set_index('date')
 
-    dbname = '20240801-20240830'
+    # use dbname to crawl news from sina between start_date and end_date
+    dbname = '20240801-20240802'
     table = get_db(dbname)
     lock = threading.Lock()
     start_date = datetime.strptime(dbname.split('-')[0],'%Y%m%d')

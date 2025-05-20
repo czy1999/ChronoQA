@@ -1,0 +1,6 @@
+openai
+dashscope
+dotenv
+trafilatura==1.6.4
+tinydb
+pandas

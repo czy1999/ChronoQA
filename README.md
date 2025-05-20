@@ -92,27 +92,43 @@ The dataset follows this JSON structure:
 pip install -r requirements.txt
 ```
 
-1. Create .env fill your API keys:
+1. Create .env file in the root directory and fill your API keys:
 ```plaintext
-ZHIPU_API_KEY=your_api_key_here
 LLM_API_KEY=your_api_key_here
 LLM_API_BASE=your_api_url_here
 GTE_API_KEY=your_api_key_here
 ```
 
 ### Usage
-1. News crawling:
+1. Clone the repository:
+```bash
+git clone https://github.com/czy1999/ChronoQA.git
+cd ChronoQA
+```
+
+2. Create a directory to save the news data:  
+```bash
+mkdir data
+```
+
+3. News crawling:
+
+select a date range to crawl news from sina
+```bash
+dbname = '20240801-20240802'
+```
+
 ```python
 python scripts/news_crawer.py
  ```
 
  Note: The full pre-processed news passages (300k) have been saved in vector DB ([ChromaDB](https://docs.trychroma.com/)). You can use it to generate QA pairs or to query the database. Download the database from this [link](https://drive.google.com/file/d/1ZyrRbHnAbVabt9AaVMbrY7IXWLM-ypMH/view?usp=sharing).
 
-2. Question generation:
+4. Question generation:
 ```python
 python scripts/question_generation.py
  ```
-3. Question filtering:
+5. Question filtering:
 ```python
 python scripts/question_filter.py
  ```

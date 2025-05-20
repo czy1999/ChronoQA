@@ -14,7 +14,9 @@ import pickle
 import re
 import dashscope
 import numpy as np
+from dotenv import load_dotenv
 
+load_dotenv()
 LLM_API_KEY = os.getenv("LLM_API_KEY")
 LLM_API_BASE = os.getenv("LLM_API_BASE")
 GTE_API_KEY = os.getenv("GTE_API_KEY")
@@ -211,7 +213,10 @@ def llm_allinone(prompt,model = "deepseek-chat",stream=False):
         return response.choices[0].message.content.strip()
  
 if __name__ == "__main__":
-    api_config = ApiConfig.from_json_file("/home/czy/code/AutoLabel-GPT/zhipu_config.json")
+    print(llm_stream("hi",stream=False))
+    exit()
+    
+    api_config = ApiConfig.from_json_file("./zhipu_config.json")
     system_prompt = ""
     # pompts formats
     # prompts = [{'index':0,'prompt':"What is the capital of France?",},
@@ -220,7 +225,7 @@ if __name__ == "__main__":
     #     {'index':3,'prompt':"How does quantum computing work?",},
     #     {'index':4,'prompt':"Hi, say this is a test.",},
     # ]
-    with open('/home/czy/code/news_crawer/data/batch_data/output_file/to_generate_prompt_list.pkl','rb') as f:
+    with open('./data/batch_data/output_file/to_generate_prompt_list.pkl','rb') as f:
         prompts = pickle.load(f)
     print(len(prompts))
     generated_prompts = []
@@ -232,5 +237,5 @@ if __name__ == "__main__":
         except:
             continue
     print(len(generated_prompts))
-    with open('/home/czy/code/news_crawer/data/batch_data/output_file/api_generated_prompts_v1.pkl','wb') as f:
+    with open('./data/batch_data/output_file/api_generated_prompts_v1.pkl','wb') as f:
         pickle.dump(generated_prompts,f)

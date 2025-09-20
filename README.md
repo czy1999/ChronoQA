@@ -77,6 +77,7 @@ The dataset follows this JSON structure:
     "On July 23, 2019, COTODAMA released...",
     "On July 17, 2019, Apple announced..."
   ]
+  "golden_chunks_urls":["https://...", "https://..."]
 }
 
 ```

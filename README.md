@@ -3,7 +3,8 @@
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-ChronoQA is a temporal-sensitive question answering system for news data, capable of processing and analyzing news content, generating structured QA pairs, and supporting time-based queries.
+
+ChronoQA is a temporal-sensitive question answering system for news data, capable of processing and analyzing news content, generating structured QA pairs, and supporting time-based queries. [Paper](https://arxiv.org/abs/2508.12282) [Dataset](https://doi.org/10.5281/zenodo.17163857)
 ![Examples](./imgs/dataset.png)
 
 ## Key Features

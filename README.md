@@ -122,7 +122,7 @@ dbname = '20240801-20240802'
 python scripts/news_crawer.py
  ```
 
- Note: The full pre-processed news passages (300k) have been saved in vector DB ([ChromaDB](https://docs.trychroma.com/)). You can use it to generate QA pairs or to query the database. Download the database from this [link](https://drive.google.com/file/d/1ZyrRbHnAbVabt9AaVMbrY7IXWLM-ypMH/view?usp=sharing).
+ Note: The full pre-processed news passages (300k) have been saved in vector DB ([ChromaDB](https://docs.trychroma.com/)). You can use it to generate QA pairs or to query the database. Download the database from this [link](https://drive.google.com/file/d/1j06xiEUl1evAmJMuPl5eJx3csFCNyQ2j/view?usp=drive_link).
 
 4. Question generation:
 ```python

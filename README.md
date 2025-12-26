@@ -4,7 +4,7 @@
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
 
-ChronoQA is a temporal-sensitive question answering system for news data, capable of processing and analyzing news content, generating structured QA pairs, and supporting time-based queries. [Paper]([https://arxiv.org/abs/2508.12282](https://www.nature.com/articles/s41597-025-06098-y)) [Dataset](https://doi.org/10.5281/zenodo.17163857)
+ChronoQA is a temporal-sensitive question answering system for news data, capable of processing and analyzing news content, generating structured QA pairs, and supporting time-based queries. [Paper](https://www.nature.com/articles/s41597-025-06098-y) [Dataset](https://doi.org/10.5281/zenodo.17163857)
 ![Examples](./imgs/dataset.png)
 
 > **News! 🎉** Our evaluation and baseline code is now open-sourced at: [https://github.com/czy1999/ChronoReflect](https://github.com/czy1999/ChronoReflect)
@@ -138,6 +138,21 @@ python scripts/question_generation.py
 python scripts/question_filter.py
  ```
 
+## Citation
 
+If you find this code or our dataset useful for your research, please consider citing our paper:
+
+```bibtex
+@article{chen2025question,
+  title={A Question Answering Dataset for Temporal-Sensitive Retrieval-Augmented Generation},
+  author={Chen, Ziyang and Min, Erxue and Zhao, Xiang and Li, Yunxin and Jia, Xin and Liao, Jinzhi and Li, Jichao and Wang, Shuaiqiang and Hu, Baotian and Yin, Dawei},
+  journal={Scientific Data},
+  volume={12},
+  number={1},
+  pages={1855},
+  year={2025},
+  publisher={Nature Publishing Group UK London}
+}
+```
 ## License
  CC BY 4.0 license. 
